@@ -1,0 +1,100 @@
+/* Search bar container */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Container focus effect */
+  .search-bar-container:focus-within {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Input field */
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  /* Customize placeholder */
+  .search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Search button */
+  .search-icon {
+    border: none;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    border-radius: 0 8px 8px 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .search-icon:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  /* Container focus state */
+  .search-bar-container.focused {
+    border-color: #28a745; /* Green when focused */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search-bar-container {
+      max-width: 100%;
+    }
+    .search-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+    .search-icon {
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-bar-container {
+      padding: 3px;
+    }
+    .search-input {
+      font-size: 12px;
+      padding: 6px;
+    }
+    .search-icon {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  
+  /* Accessibility - Hide label text */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  

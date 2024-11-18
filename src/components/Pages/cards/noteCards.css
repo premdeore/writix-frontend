@@ -1,0 +1,56 @@
+/* Container for vertical scroll */
+.cards-container-vertical {
+    display: flex;
+    flex-direction: column; /* Vertical stacking */
+    gap: 16px; /* Space between cards */
+    padding: 10px;
+    /* margin-top: 30%; */
+    max-width: 100%; /* Full-width container */
+    max-height: 70vh; /* Allow vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin: 1% auto; /* Center container horizontally */
+    scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+  }
+  
+  /* Style for individual cards */
+  .latest-cards {
+    background-color: #f0f4ff; /* Professional light background */
+    color: #333; /* Dark text for readability */
+    padding: 20px;
+    border: 1px solid #ccc; /* Light border for subtlety */
+    border-radius: 10px; /* Rounded corners for modern look */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 1rem; /* Responsive font size */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) { /* Tablet */
+    .latest-cards {
+      font-size: 0.9rem; /* Slightly smaller text */
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile */
+    .latest-cards {
+      font-size: 0.8rem; /* Smaller text for mobile */
+      padding: 10px;
+      border-radius: 8px; /* Adjusted corner radius */
+    }
+  }
+  
+  /* Custom scrollbar for better look */
+  .cards-container-vertical::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .cards-container-vertical::-webkit-scrollbar-thumb {
+    background: #007bff; /* Professional blue */
+    border-radius: 4px;
+  }
+  
+  .cards-container-vertical::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray track */
+  }
+  
